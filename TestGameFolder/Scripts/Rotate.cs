@@ -6,7 +6,7 @@ public class Rotate : MonoBehaviour
     {
         if (Raylib.IsKeyDown(KeyboardKey.KEY_R))
         {
-            transform.rotation += 200f * Raylib.GetFrameTime();
+            transform.rotation.X += 200f * Raylib.GetFrameTime();
         }
     }
 }

@@ -1,11 +1,11 @@
-
-
 using System.Numerics;
+using Engine;
+using Newtonsoft.Json;
 
-public class Scene : IDisposable
+public class Scene : Asset, IDisposable
 {
-    public string Name {get; set;}
     private int _buildIndex;
+    [JsonIgnore]
     public int BuildIndex
     {
         get { return _buildIndex; }
@@ -14,13 +14,24 @@ public class Scene : IDisposable
     public List<GameObject> GameObjects = new List<GameObject>();
     private bool _loaded = false;
 
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-    public Scene(){}
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-
-    public Scene(string name)
+    public Scene()
     {
-        Name = name;
+    }
+    public Scene(string name, string folderPath, List<GameObject> GameObjects) : base(name, folderPath)
+    {
+    }
+
+    public Scene(string name, string folderPath) : base(name, folderPath)
+    {
+    }
+
+    public Scene(string folderPath) : base(folderPath)
+    {
+    }
+
+    public void SaveChanges()
+    {
+        SceneManager.CreateScene(this);
     }
 
     public void Load()
@@ -39,20 +50,20 @@ public class Scene : IDisposable
         _loaded = true;
     }
     
-    public void CreateGameObject(GameObject gameObject)
+    public void AddGameObject(GameObject gameObject)
     {
         if (_loaded) gameObject.Initialize();
         GameObjects.Add(gameObject);
     }
 
-    public void CreateGameObject(GameObject gameObject, Vector2 position)
+    public void AddGameObject(GameObject gameObject, Vector3 position)
     {
         gameObject.transform.position = position;
         if (_loaded) gameObject.Initialize();
         GameObjects.Add(gameObject);
     }
 
-    public void DeleteGameObject(GameObject gameObject)
+    public void RemoveGameObject(GameObject gameObject)
     {
         GameObjects.Remove(gameObject);
     }
@@ -63,7 +74,6 @@ public class Scene : IDisposable
         {
             gameObject.Destroy();
         }
-        //throw new NotImplementedException();
-        Console.WriteLine($"Scene \"{Name}\" cleaned from memory.");
+        //Console.WriteLine($"Scene \"{Name}\" cleaned from memory.");
     }
 }

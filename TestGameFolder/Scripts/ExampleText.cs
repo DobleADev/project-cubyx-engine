@@ -17,7 +17,7 @@ public class ExampleText : MonoBehaviour
         moveInput.X = (int)Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT) - (int)Raylib.IsKeyDown(KeyboardKey.KEY_LEFT);
         moveInput.Y = (int)Raylib.IsKeyDown(KeyboardKey.KEY_DOWN) - (int)Raylib.IsKeyDown(KeyboardKey.KEY_UP);
 
-        transform.position += moveSpeed * Raylib.GetFrameTime() * moveInput;
+        transform.position += new Vector3(moveSpeed * moveInput.X, moveSpeed * moveInput.Y, 0) * Raylib.GetFrameTime();
     }
     
     protected override void Draw() 

@@ -6,7 +6,9 @@ namespace Engine
     {
         private static List<Scene> _buildScenes = new List<Scene>();
         public static List<Scene> GetScenesInBuild() => _buildScenes;
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         static Scene currentScene;
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public static Scene GetCurrentScene() 
         {
             try
@@ -24,7 +26,7 @@ namespace Engine
         {
             _buildScenes.Add(scene);
             scene.BuildIndex = _buildScenes.IndexOf(scene);
-            SerializeScene(scene);
+            // SerializeScene(scene);
         }
 
         public static void LoadScene(string sceneName)
@@ -59,21 +61,24 @@ namespace Engine
 
         
 
-        public static Scene? GetScene(string sceneName)
+        private static Scene? GetScene(string sceneName)
         {
             Scene? sceneTarget = null;
             sceneTarget = _buildScenes.Where(i => i.Name == sceneName).FirstOrDefault();
             return sceneTarget;
         }
 
-        public static void LoadFromScenes(int index)
-        {
-            currentScene = _buildScenes[index];
-        }
+        // public static Scene? LoadFromFile(string sceneName)
+        // {
+            
+        // }
 
         static Scene? DeserializeScene(string sceneName)
         {
-            string filepath = $"C:\\localData\\{sceneName}.json";
+            Scene sceneToLoad = GetScene(sceneName);
+            if (sceneToLoad == null) return null;
+
+            string filepath = Application.DataPath + $"{sceneToLoad.Path}\\{sceneName}.json";
             if (File.Exists(filepath)) // -------------------------------- Cargar datos ------------------ //
             {
                 try
@@ -99,12 +104,14 @@ namespace Engine
         {
             try
             {
-                if (_buildScenes.Count == 0) throw new JsonException("No hay datos");
+                //if (_buildScenes.Count == 0) throw new JsonException("No hay datos");
                 string temp = JsonConvert.SerializeObject(sceneToSave, new JsonSerializerSettings()
                 {
                     TypeNameHandling = TypeNameHandling.All
                 });
-                System.IO.File.WriteAllText($"C:\\localData\\{sceneToSave.Name}.json", temp);
+                string directoryPath = Application.DataPath + sceneToSave.Path;
+                if (!Directory.Exists(directoryPath)) Directory.CreateDirectory(directoryPath);
+                File.WriteAllText(directoryPath + $"\\{sceneToSave.Name}.json", temp);
                 Console.WriteLine("Escena guardada correctamente.");
             }
             catch (JsonException ex)
@@ -116,6 +123,11 @@ namespace Engine
                 Console.WriteLine("Error al guardar los datos. ", ex);
             }
             
+        }
+
+        internal static void CreateScene(Scene scene)
+        {
+            SerializeScene(scene);
         }
     }
 }

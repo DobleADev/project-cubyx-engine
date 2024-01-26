@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\ztemp\\CubyxEngine\\CubyxEngine.csproj": {}
+    "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj": {}
   },
   "projects": {
-    "D:\\projects\\ztemp\\CubyxEngine\\CubyxEngine.csproj": {
+    "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\ztemp\\CubyxEngine\\CubyxEngine.csproj",
+        "projectUniqueName": "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj",
         "projectName": "CubyxEngine",
-        "projectPath": "D:\\projects\\ztemp\\CubyxEngine\\CubyxEngine.csproj",
+        "projectPath": "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj",
         "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\ztemp\\CubyxEngine\\obj\\",
+        "outputPath": "D:\\projects\\raylib\\CubyxEngine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ariel\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,6 +20,7 @@
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
