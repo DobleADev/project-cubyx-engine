@@ -1,16 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z2IXLkTFOmXOoYBHUXd3wIyphs1dIKHUQDdIGqA964HepW/kLmzRx9A1Zo2uaODzONLdBXBrcYXBS6JwWJUpJw==",
+  "dgSpecHash": "EiWWLwSQne3rdJPfNKlqYBViiQ2U9Vl5pvmQXBNlJQ5dlw48MMZ+kow5TREiHNNcg6c10XQ4gRJVjGy/UHiVJA==",
   "success": true,
-  "projectFilePath": "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj",
+  "projectFilePath": "C:\\projects\\.net\\CubyxEngine\\CubyxEngine.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ariel\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\ariel\\.nuget\\packages\\raylib-cs\\4.5.0\\raylib-cs.4.5.0.nupkg.sha512",
-    "C:\\Users\\ariel\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\ariel\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\ariel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\ariel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\ariel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+    "C:\\Users\\Ari\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Ari\\.nuget\\packages\\raylib-cs\\4.5.0\\raylib-cs.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ari\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

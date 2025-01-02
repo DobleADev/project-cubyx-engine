@@ -172,25 +172,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ariel\\.nuget\\packages\\": {}
+    "C:\\Users\\Ari\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj",
+      "projectUniqueName": "C:\\projects\\.net\\CubyxEngine\\CubyxEngine.csproj",
       "projectName": "CubyxEngine",
-      "projectPath": "D:\\projects\\raylib\\CubyxEngine\\CubyxEngine.csproj",
-      "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\raylib\\CubyxEngine\\obj\\",
+      "projectPath": "C:\\projects\\.net\\CubyxEngine\\CubyxEngine.csproj",
+      "packagesPath": "C:\\Users\\Ari\\.nuget\\packages\\",
+      "outputPath": "C:\\projects\\.net\\CubyxEngine\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ariel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Ari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -229,30 +235,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
